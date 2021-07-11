@@ -8,7 +8,7 @@ class BCSpider(Spider):
     allowed_domains = ["db.bordercollie.ru"]
 
     def start_requests(self):
-        for id in range (63160, 63163):
+        for id in range (63160, 107624):
             yield Request('http://db.bordercollie.ru/details.php?id=' + repr(id), self.parse)
 
     def parse(self, response):
